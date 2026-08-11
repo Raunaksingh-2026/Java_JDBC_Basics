@@ -43,3 +43,34 @@ Flow OF JDBC ->
        ↓
     Close Connection
 
+JDBC = Java Database Connectivity
+    Purpose:
+        -> Connect Java Application with Database
+        -> Execute SQL Queries
+        -> Retrieve and Manipulate Data
+    Requirements:
+        1. Database Server (MySQL)
+        2. JDBC Driver (.jar)
+        3. java.sql package
+    MySQL Driver -> [ com.mysql.cj.jdbc.Driver ]
+    Older Driver -> [ com.mysql.jdbc.Driver ]
+
+Important JDBC Classes / Interfaces ->
+    1. DriverManager
+       -> Establishes database connection
+    2. Connection
+       -> Represents connection with database
+    3. Statement
+       -> Executes static SQL queries
+    4. PreparedStatement
+       -> Executes parameterized queries
+       -> Prevents SQL Injection
+       -> Faster than Statement
+    5. CallableStatement
+       -> Executes Stored Procedures
+    6. ResultSet
+       -> Stores data returned by SELECT query
+    7. ResultSetMetaData
+       -> Information about columns
+    8. DatabaseMetaData
+       -> Information about database
