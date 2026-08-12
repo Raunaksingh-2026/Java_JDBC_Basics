@@ -10,7 +10,7 @@ SQL Categories ->
     5. TCL (Transaction Control Language) -> Used to manage transactions
            --> COMMIT, ROLLBACK, SAVEPOINT
 
-=================================================================
+-----------------------------------------------------------------------------
 
 JDBC [ Java Data Base Connectivity ] -> USE to connect Database
     Requirement -> 1. MySQL
@@ -23,6 +23,7 @@ JDBC [ Java Data Base Connectivity ] -> USE to connect Database
 3.    Statement	            SQL execute
 4.    PreparedStatement	    Parameterized query
 5.    ResultSet	            Data fetch
+-----------------------------------------------------------------------------
 
 Flow OF JDBC ->
     Create Database using MySql Workbench --> [ CREATE DATABASES Database_name ] -> [ USE Created_Database_Name ] -> Create Table using Query
@@ -42,6 +43,7 @@ Flow OF JDBC ->
     Process Result
        ↓
     Close Connection
+-----------------------------------------------------------------------------
 
 JDBC = Java Database Connectivity
     Purpose:
@@ -54,6 +56,7 @@ JDBC = Java Database Connectivity
         3. java.sql package
     MySQL Driver -> [ com.mysql.cj.jdbc.Driver ]
     Older Driver -> [ com.mysql.jdbc.Driver ]
+-----------------------------------------------------------------------------
 
 Important JDBC Classes / Interfaces ->
     1. DriverManager
@@ -74,3 +77,59 @@ Important JDBC Classes / Interfaces ->
        -> Information about columns
     8. DatabaseMetaData
        -> Information about database
+-----------------------------------------------------------------------------
+
+JDBC Architecture ->
+        Java Application
+                ↓
+            JDBC API
+                ↓
+           JDBC Driver
+                ↓
+            Database
+-----------------------------------------------------------------------------
+
+JDBC URL Format --> [ jdbc:mysql://host:port/database_name ]
+    Example -> [ jdbc:mysql://localhost:3306/learnJava ]
+        host          -> localhost
+        port          -> 3306
+        database_name -> learnJava
+-----------------------------------------------------------------------------
+
+JDBC Flow ->
+    1. Create Database
+    2. Create Table
+    3. Add JDBC Driver
+    4. Import java.sql package
+    5. Load Driver
+    6. Create Connection
+    7. Create Statement / PreparedStatement
+    8. Execute Query
+    9. Process Result
+    10. Close Resources
+--------------------------------------------------
+
+Step 1 : Load Driver -->
+       Class.forName("com.mysql.cj.jdbc.Driver");
+
+Note -> Modern JDBC automatically loads driver.
+     -> Class.forName() is generally optional.
+--------------------------------------------------
+
+Step 2 : Create Connection -->
+    Connection con =
+        DriverManager.getConnection(
+            url,
+            username,
+            password
+        );
+
+    -> Connection is an Interface.
+--------------------------------------------------
+
+Step 3 : Create Statement -->
+    Statement st = con.createStatement();
+
+    -> Used for static queries.
+    -> Example --> [ SELECT * FROM users ]
+--------------------------------------------------
