@@ -133,3 +133,44 @@ Step 3 : Create Statement -->
     -> Used for static queries.
     -> Example --> [ SELECT * FROM users ]
 --------------------------------------------------
+
+Step 4 : Create PreparedStatement -->
+    PreparedStatement ps =
+        con.prepareStatement(query);
+
+    Advantages ->
+        ✓ Faster
+        ✓ Reusable
+        ✓ Secure
+        ✓ Prevents SQL Injection
+    Example ->
+        -> [ INSERT INTO users(name,email) VALUES(?,?) ]
+
+Step 5 : Execute Query --> SELECT Query
+    ResultSet rs =
+        ps.executeQuery();
+
+    --> Returns -> ResultSet Object
+            INSERT / UPDATE / DELETE
+
+    int rowsAffected =
+        ps.executeUpdate();
+
+    --> Returns ->
+            Number of affected rows
+
+ResultSet -> Used to read data returned by SELECT query
+    Methods ->
+        rs.next()
+        rs.previous()
+        rs.first()
+        rs.last()
+    Data Fetching ->
+        rs.getInt("id");
+        rs.getString("name");
+        rs.getDouble("salary");
+-----------------------------------------------------------------------------
+
+Statement -> | ✓ Simple | ✗ Slow | ✗ SQL Injection Risk |
+PreparedStatement -> | ✓ Secure| ✓ Faster | ✓ Reusable | ✓ Industry Standard
+-----------------------------------------------------------------------------
