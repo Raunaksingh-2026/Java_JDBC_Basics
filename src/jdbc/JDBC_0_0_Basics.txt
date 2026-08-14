@@ -159,18 +159,38 @@ Step 5 : Execute Query --> SELECT Query
     --> Returns ->
             Number of affected rows
 
-ResultSet -> Used to read data returned by SELECT query
-    Methods ->
-        rs.next()
-        rs.previous()
-        rs.first()
-        rs.last()
-    Data Fetching ->
-        rs.getInt("id");
-        rs.getString("name");
-        rs.getDouble("salary");
+ResultSet -> is used to read data returned by SELECT query.
+    Example ->
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            System.out.println(id + " " + name);
+        }
+    Common methods ->
+        rs.next() -> Moves to next row.
+        rs.getInt() -> Gets integer value.
+        rs.getString() -> Gets String value.
+        rs.getDouble() -> Gets double value.
 -----------------------------------------------------------------------------
 
 Statement -> | ✓ Simple | ✗ Slow | ✗ SQL Injection Risk |
 PreparedStatement -> | ✓ Secure| ✓ Faster | ✓ Reusable | ✓ Industry Standard
+-----------------------------------------------------------------------------
+
+SQL Injection -> is a security problem caused by directly putting
+user input inside an SQL query.
+
+    Unsafe Example ->
+        String query =
+            "SELECT * FROM users WHERE name = '" + name + "'";
+    Solution ->
+        Use PreparedStatement.
+
+    Example ->
+        String query =
+            "SELECT * FROM users WHERE name = ?";
+        PreparedStatement ps =
+            con.prepareStatement(query);
+        ps.setString(1, name);
 -----------------------------------------------------------------------------
