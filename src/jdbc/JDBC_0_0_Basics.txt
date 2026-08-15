@@ -194,3 +194,59 @@ user input inside an SQL query.
             con.prepareStatement(query);
         ps.setString(1, name);
 -----------------------------------------------------------------------------
+
+CRUD Operations ->
+    Create -> INSERT
+    Read   -> SELECT
+    Update -> UPDATE
+    Delete -> DELETE
+-----------------------------------------------------------------------------
+
+Batch Processing ->
+    Purpose -> Insert multiple records efficiently
+    Methods -> addBatch() ---> executeBatch()
+    Benefit -> Reduces database calls
+-----------------------------------------------------------------------------
+
+Transactions ->
+    * Default -> Auto Commit = TRUE
+    * Disable Auto Commit --> con.setAutoCommit(false);
+    * Commit --> con.commit();
+    * Rollback --> con.rollback();
+
+Use Cases -> Banking | Payment Systems | Money Transfer
+-----------------------------------------------------------------------------
+
+Try-With-Resources -> Automatically closes resources
+    Example ->
+        try(
+            Connection con = ...
+            PreparedStatement ps = ...
+        ){
+            // code
+        }
+
+Advantages ->
+    ✓ No memory leak
+    ✓ Cleaner code
+    ✓ Recommended
+-----------------------------------------------------------------------------
+
+DAO[ Data Access Object ] Pattern ->
+    Purpose -> Separate database code from business logic
+    Structure ->
+        User.java
+        UserDAO.java
+        Main.java
+    Benefits ->
+        ✓ Clean Code
+        ✓ Reusable Code
+        ✓ Easy Maintenance
+        ✓ Industry Standard
+-----------------------------------------------------------------------------
+
+Resource Closing Order -> Close in reverse order.
+    ResultSet.close();
+    Statement.close();
+    Connection.close();
+=================================================================
