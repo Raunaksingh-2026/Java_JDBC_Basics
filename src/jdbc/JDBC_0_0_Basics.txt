@@ -174,6 +174,16 @@ ResultSet -> is used to read data returned by SELECT query.
         rs.getDouble() -> Gets double value.
 -----------------------------------------------------------------------------
 
+CallableStatement is used to call stored procedures
+from Java.
+    Example ->
+        CallableStatement cs =
+            con.prepareCall("{call getUsers()}");
+        ResultSet rs = cs.executeQuery();
+    Use CallableStatement when:
+        -> Database contains Stored Procedures.
+-----------------------------------------------------------------------------
+
 Statement -> | ✓ Simple | ✗ Slow | ✗ SQL Injection Risk |
 PreparedStatement -> | ✓ Secure| ✓ Faster | ✓ Reusable | ✓ Industry Standard
 -----------------------------------------------------------------------------
@@ -249,4 +259,11 @@ Resource Closing Order -> Close in reverse order.
     ResultSet.close();
     Statement.close();
     Connection.close();
-=================================================================
+-----------------------------------------------------------------------------
+
+Common Exceptions ->
+    ClassNotFoundException -> JDBC Driver Missing
+    SQLException -> Database Related Error
+    SQLSyntaxErrorException -> Wrong SQL Query
+    NullPointerException -> Object Reference is Null
+-----------------------------------------------------------------------------
