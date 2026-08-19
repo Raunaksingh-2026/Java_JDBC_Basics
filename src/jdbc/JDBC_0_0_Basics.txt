@@ -267,3 +267,27 @@ Common Exceptions ->
     SQLSyntaxErrorException -> Wrong SQL Query
     NullPointerException -> Object Reference is Null
 -----------------------------------------------------------------------------
+
+++++++++++++++++++++++ JDBC BEST PRACTICES +++++++++++++++++++++
+
+✓ Prefer PreparedStatement over Statement.
+✓ Use try-with-resources.
+✓ Do not hard-code database passwords in source code.
+✓ Use transactions when multiple operations must succeed
+  or fail together.
+✓ Validate user input.
+✓ Close database resources properly.
+✓ Use DAO to separate database code from business logic.
+-----------------------------------------------------------------------------
+
+Interview Questions
+1. What is JDBC?
+2. What is JDBC Driver?
+3. Difference between Statement and PreparedStatement?
+4. What is SQL Injection?
+5. What is ResultSet?
+6. What is DAO Pattern?
+7. What is Batch Processing?
+8. What is Transaction?
+9. What is Try-With-Resources?
+10. Difference between executeQuery() and executeUpdate()?
