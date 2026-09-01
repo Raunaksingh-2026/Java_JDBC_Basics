@@ -188,6 +188,21 @@ Statement -> | ✓ Simple | ✗ Slow | ✗ SQL Injection Risk |
 PreparedStatement -> | ✓ Secure| ✓ Faster | ✓ Reusable | ✓ Industry Standard
 -----------------------------------------------------------------------------
 
+Metadata in JDBC ->
+    1. ResultSetMetaData -> Provides information about columns returned by a ResultSet.
+        Example -> ResultSetMetaData metaData = rs.getMetaData();
+        Useful information ->
+            -> Number of columns
+            -> Column names
+            -> Column types
+    2. DatabaseMetaData -> Provides information about the database and JDBC driver.
+        Example -> DatabaseMetaData metaData = con.getMetaData();
+        Useful information ->
+            -> Database name
+            -> Database version
+            -> Driver information
+-----------------------------------------------------------------------------
+
 SQL Injection -> is a security problem caused by directly putting
 user input inside an SQL query.
 
@@ -235,7 +250,6 @@ Try-With-Resources -> Automatically closes resources
         ){
             // code
         }
-
 Advantages ->
     ✓ No memory leak
     ✓ Cleaner code
@@ -266,21 +280,6 @@ Common Exceptions ->
     SQLException -> Database Related Error
     SQLSyntaxErrorException -> Wrong SQL Query
     NullPointerException -> Object Reference is Null
------------------------------------------------------------------------------
-
-Metadata in JDBC ->
-    1. ResultSetMetaData -> Provides information about columns returned by a ResultSet.
-        Example -> ResultSetMetaData metaData = rs.getMetaData();
-        Useful information ->
-            -> Number of columns
-            -> Column names
-            -> Column types
-    2. DatabaseMetaData -> Provides information about the database and JDBC driver.
-        Example -> DatabaseMetaData metaData = con.getMetaData();
-        Useful information ->
-            -> Database name
-            -> Database version
-            -> Driver information
 -----------------------------------------------------------------------------
 
 ++++++++++++++++++++++ JDBC BEST PRACTICES +++++++++++++++++++++
