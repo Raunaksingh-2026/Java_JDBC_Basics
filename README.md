@@ -80,6 +80,47 @@ The main goal of this repository is to learn JDBC step by step by writing practi
 
 ---
 
+## 🏗️ JDBC Architecture
+
+```text
+Java Application
+        │
+        ↓
+     JDBC API
+        │
+        ↓
+   JDBC Driver
+        │
+        ↓
+  MySQL Database
+```
+
+---
+
+## ⚙️ JDBC Working Flow
+
+```text
+Create Database
+       ↓
+Create Table
+       ↓
+Add JDBC Driver
+       ↓
+Import java.sql Package
+       ↓
+Create Database Connection
+       ↓
+Create Statement / PreparedStatement
+       ↓
+Execute SQL Query
+       ↓
+Process ResultSet
+       ↓
+Close Resources
+```
+
+---
+
 ## 🔄 Learning Progress
 
 ```text
