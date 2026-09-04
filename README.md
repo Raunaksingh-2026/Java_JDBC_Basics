@@ -121,6 +121,44 @@ Close Resources
 
 ---
 
+## 📂 Project Structure
+
+```text
+jdbcJavaBasic
+│
+├── src
+│   │
+│   ├── jdbc
+│   │   │
+│   │   ├── a_basics
+│   │   │   ├── JDBC_01_BasicRetrieve...
+│   │   │   ├── JDBC_02_BasicInsert...
+│   │   │   └── JDBC_03_Retrieving...
+│   │   │
+│   │   ├── b_preparedstatement
+│   │   │   └── JDBC_04_Inserting...
+│   │   │
+│   │   ├── c_advance
+│   │   │   └── JDBC_07_BatchProcessing...
+│   │   │
+│   │   ├── d_daodesignpattern
+│   │   │   ├── JDBC_09_DesignPattern...
+│   │   │   └── Main.java
+│   │   │
+│   │   └── JDBC_0_Basics.txt
+│   │
+│   └── sql
+│       └── SQL_0_1_Introduction...
+│
+├── .gitignore
+│
+├── README.md
+│
+└── jdbcJavaBasic.iml
+```
+
+---
+
 ## 🔄 Learning Progress
 
 ```text
@@ -144,6 +182,21 @@ Transactions               ░░░░░░░░░░ 0%
 
 DAO Design Pattern         ░░░░░░░░░░ 0%
 ```
+
+---
+
+## 🔮 Future Learning
+
+* Complete CRUD Operations
+* Transactions
+* Exception Handling in JDBC
+* Try-With-Resources
+* CallableStatement
+* Stored Procedures
+* ResultSetMetaData
+* DatabaseMetaData
+* Complete DAO Implementation
+* Build a JDBC-Based Project
 
 ---
 
