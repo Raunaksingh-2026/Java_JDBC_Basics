@@ -159,6 +159,31 @@ jdbcJavaBasic
 
 ---
 
+## 📚 JDBC Important Components
+
+| Class / Interface | Purpose |
+|-------------------|---------|
+| `DriverManager` | Creates database connection |
+| `Connection` | Represents database connection |
+| `Statement` | Executes static SQL queries |
+| `PreparedStatement` | Executes parameterized SQL queries |
+| `CallableStatement` | Executes stored procedures |
+| `ResultSet` | Stores data returned by SELECT query |
+
+---
+
+## 🔗 JDBC URL Format
+
+```text
+jdbc:mysql://host:port/database_name
+```
+
+### Example
+
+```text
+jdbc:mysql://localhost:3306/database_name
+```
+
 ## 🔄 Learning Progress
 
 ```text
