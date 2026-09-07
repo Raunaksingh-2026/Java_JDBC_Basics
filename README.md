@@ -184,6 +184,34 @@ jdbc:mysql://host:port/database_name
 jdbc:mysql://localhost:3306/database_name
 ```
 
+---
+
+## 📋 SQL Categories
+
+| Category | Full Form | Purpose |
+|----------|-----------|---------|
+| DDL | Data Definition Language | Defines database structure |
+| DML | Data Manipulation Language | Modifies database data |
+| DQL | Data Query Language | Retrieves data |
+| DCL | Data Control Language | Controls permissions |
+| TCL | Transaction Control Language | Manages transactions |
+
+### Common Commands
+
+```text
+DDL → CREATE, ALTER, DROP, TRUNCATE, RENAME
+
+DML → INSERT, UPDATE, DELETE
+
+DQL → SELECT
+
+DCL → GRANT, REVOKE
+
+TCL → COMMIT, ROLLBACK, SAVEPOINT
+```
+
+---
+
 ## 🔄 Learning Progress
 
 ```text
