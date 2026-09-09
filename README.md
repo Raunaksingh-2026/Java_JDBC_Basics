@@ -212,6 +212,40 @@ TCL → COMMIT, ROLLBACK, SAVEPOINT
 
 ---
 
+## 🧠 Concepts Practiced
+
+* Java Database Connectivity
+* SQL
+* MySQL Database Connection
+* JDBC Driver
+* DriverManager
+* Connection
+* Statement
+* PreparedStatement
+* ResultSet
+* CRUD Operations
+* Batch Processing
+* Transactions
+* Exception Handling
+* Try-With-Resources
+* DAO Design Pattern
+
+---
+
+## 🎯 CRUD Operations
+
+```text
+Create → INSERT
+
+Read   → SELECT
+
+Update → UPDATE
+
+Delete → DELETE
+```
+
+---
+
 ## 🔄 Learning Progress
 
 ```text
