@@ -246,6 +246,30 @@ Delete → DELETE
 
 ---
 
+## 🔐 PreparedStatement
+
+`PreparedStatement` is used to execute parameterized SQL queries.
+
+### Advantages
+
+* Helps prevent SQL Injection
+* Supports parameters
+* Reusable
+* Commonly preferred for database applications
+
+Example:
+
+```java
+String query = "SELECT * FROM users WHERE name = ?";
+
+PreparedStatement ps =
+        connection.prepareStatement(query);
+
+ps.setString(1, name);
+```
+
+---
+
 ## 🔄 Learning Progress
 
 ```text
