@@ -52,5 +52,28 @@ public class JDBC_01_BasicRetrieving {
                         "VALUES " +
                         "('Om Singh', 'om123@gmail.com', 'Male', '2007-04-29')";
 
+/********************************************* 3. Load Necessary Driver ********************************************/
+/*
+        Class.forName() -> Loads Driver class dynamically.
+        -> Driver class contains a static block which registers the driver with DriverManager.
+        -> com.mysql.cj.jdbc.Driver --> MySQL JDBC Driver Class.
+        -> * Older Driver -> [ com.mysql.jdbc.Driver ]
+        -> * Current MySQL Driver -> [ com.mysql.cj.jdbc.Driver ]
+        Common Error -> ClassNotFoundException --> Usually occurs when JDBC JAR is not added correctly.
+
+        NOTE -> Modern JDBC drivers can automatically load the driver, so Class.forName() is generally not required now. However, it is useful for understanding how the JDBC driver is loaded and registered.
+*/
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+/********************************************* 4. Create Connection ********************************************/
+
+///        Establish connection between Java Application and MySQL Database.
+
+        Connection dataBaseConnection = DriverManager.getConnection(url, userName, password);
+/*
+        DriverManager -> Class
+        Connection    -> Interface
+        getConnection -> Method --> getConnection() may throw -> SQLTimeoutException, SQLException
+*/
     }
 }
