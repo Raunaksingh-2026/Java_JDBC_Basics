@@ -75,5 +75,23 @@ public class JDBC_01_BasicRetrieving {
         Connection    -> Interface
         getConnection -> Method --> getConnection() may throw -> SQLTimeoutException, SQLException
 */
+/********************************************* 5. Create Statement ********************************************/
+
+///        Create Statement object to execute SQL queries.
+/*
+         Statement -> Interface
+         createStatement() -> Method of Connection --> Returns a Statement object.
+*/
+        Statement dataBaseStatement = dataBaseConnection.createStatement();
+
+/********************************************* 6. Execute Query********************************************/
+/*
+         executeQuery() -> Used for SELECT queries. --> Returns a ResultSet object.
+         ResultSet -> Stores the data returned by the SELECT query.
+                   -> Data is represented in tabular form.
+*/
+///        Execute SELECT Query
+        ResultSet studentResultSet1 = dataBaseStatement.executeQuery(query1);
+
     }
 }
