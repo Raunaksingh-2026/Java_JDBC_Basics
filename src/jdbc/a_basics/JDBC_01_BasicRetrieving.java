@@ -93,5 +93,23 @@ public class JDBC_01_BasicRetrieving {
 ///        Execute SELECT Query
         ResultSet studentResultSet1 = dataBaseStatement.executeQuery(query1);
 
+/*
+         executeUpdate() -> Used for: [ INSERT, UPDATE, DELETE ] --> Returns the number of affected rows.
+         -> IMPORTANT --> Do not execute another query while the current ResultSet is still being used.
+*/
+///        Insert Data Into Database
+        int studentCount = dataBaseStatement.executeUpdate(query3);
+
+        System.out.println(studentCount + " ROW(S) AFFECTED");
+
+/********************************************* 7. Process and Get the Result ********************************************/
+/**
+        [ ResultSet cursor ] -> initially points before the first row.
+        [ next() ] -> Moves the cursor to the next row.
+        It returns:
+            * true  -> if a row exists
+            * false -> if no more rows exist
+*/
+
     }
 }
