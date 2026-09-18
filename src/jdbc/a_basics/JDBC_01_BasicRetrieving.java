@@ -111,5 +111,17 @@ public class JDBC_01_BasicRetrieving {
             * false -> if no more rows exist
 */
 
+///        Getting Data Manually
+/*
+        studentResultSet1.next();
+
+        String toStoreResult = studentResultSet1.getString("name") + " : " + studentResultSet1.getString("date_of_birth");
+        System.out.println(toStoreResult);
+
+        studentResultSet1.next();
+
+        toStoreResult = studentResultSet1.getString("name") + " : " + studentResultSet1.getString("date_of_birth");
+        System.out.println(toStoreResult);
+*/
     }
 }
