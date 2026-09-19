@@ -123,5 +123,21 @@ public class JDBC_01_BasicRetrieving {
         toStoreResult = studentResultSet1.getString("name") + " : " + studentResultSet1.getString("date_of_birth");
         System.out.println(toStoreResult);
 */
+///        OR Use while Loop
+//        This is better when the number of rows is unknown.
+
+        while (studentResultSet1.next()) {
+/**
+            We can get data using ->
+                1. Column Number
+                2. Column Name
+
+            Example ->
+             * getString(1) --> Column numbering starts from 1.
+             * getString("name")
+*/
+            String toStoreResult1 = studentResultSet1.getString("name") + " : " + studentResultSet1.getString("date_of_birth");
+            System.out.println(toStoreResult1);
+        }
     }
 }
