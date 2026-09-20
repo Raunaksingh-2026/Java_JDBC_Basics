@@ -139,5 +139,20 @@ public class JDBC_01_BasicRetrieving {
             String toStoreResult1 = studentResultSet1.getString("name") + " : " + studentResultSet1.getString("date_of_birth");
             System.out.println(toStoreResult1);
         }
+/********************************************* 8. Close Resources ********************************************/
+/**
+         Close JDBC resources after use to avoid resource leaks.
+         -> Resources should be closed in reverse order ->
+                ResultSet
+                    ↓
+                Statement
+                    ↓
+                Connection
+*/
+        studentResultSet1.close();
+        dataBaseStatement.close();
+        dataBaseConnection.close();
+
+        System.out.println("All Resources Closed!");
     }
 }
